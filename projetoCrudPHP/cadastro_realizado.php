@@ -9,7 +9,7 @@ if (isset($_POST['btnCadastrar'])){
     $idade = $_POST['txtIdade'];
     $email = $_POST['txtEmail'];
     $endereco = $_POST['txtEndereco'];
-    $senha = $_POST['txtSenha'];
+    
   
 
     $con = mysqli_connect('localhost', 'root', 'Uscs94066819', 'projetoPHP');
@@ -41,13 +41,13 @@ if (isset($_POST['btnCadastrar'])){
 <h2> Cliente Cadastrado com Sucesso!!!</h2></br></br>
     <h4>Dados do Cliente:</h4></br>
 
-   <p> 
+   <p table> 
        CPF: <?php echo $_POST["txtCpf"]; ?></br>
        Nome: <?php echo $_POST["txtNome"]; ?></br>
        Idade: <?php echo $_POST["txtIdade"]; ?></br>
        Email: <?php echo $_POST["txtEmail"]; ?></br>
        Endereco: <?php echo $_POST["txtEndereco"]; ?></br>
-       Senha: <?php echo $_POST["txtSenha"]; ?></br>    
+          
     </p>
     
 </body>

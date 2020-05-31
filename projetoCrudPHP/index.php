@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
-    <title>Bootstrap 101 Template</title>
-     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Template de login, usando Bootstrap.</title>
     <style>
         body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #eee;
-  text-align: center;
 }
 
 .form-signin {
@@ -51,36 +51,26 @@
   border-top-right-radius: 0;
 }
 
-    </style>
-    <!-- HTML5 shim e Respond.js para suporte no IE8 de elementos HTML5 e media queries -->
-    <!-- ALERTA: Respond.js não funciona se você visualizar uma página file:// -->
-    <![if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  </style>
 
-      <form-sigin action="cadastro_de_produto.php" method="POST">
-    Nome     <input type="text" name="nome" ><br><br>
-    Password       <input type="senha" name="password   "  ><br><br>
-    <input type= "submit" value= "Enviar" name= "enviar">
-    <input type= "reset" value="limpar" name= "Limpar">
+    <!-- Principal CSS do Bootstrap -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos customizados para esse template -->
+    <link href="signin.css" rel="stylesheet">
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=0m04hpr5xbAXW6supHi_1Jd-M6Qx9ZJssSXTZT8Tw47xs9Ie4RLBNTciDjCDcfQ8Z-cvyvWYx4iux9rJo4w5AmXX7d7Cfk-tf0z10wJBdAI" charset="UTF-8"></script></head>
+
+  <body class="text-center">
+    <form class="form-signin" action= "cadastrarCliente.php" method= "POST">
+      <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
+      <label for="inputEmail" class="email">email</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus></br>
+      <label for="inputCpf" class="text">CPF  </label>
+      <input type="Cpf " id="inputCpf" class="form-control" placeholder="Seu cpf" required autofocus>
+      <div class="checkbox mb-3">
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      
     </form>
-
-  </head>
-  <body>
-    <h1>Seja bem Vindo</h1>
-
-    <?php,
-    if($_POST['cpf'] === "cpf" && $_POST['senha'] === "senha"{ 
-        
-    }else{header(
-    'Location: index.php');
-    }
-    
-    ?>
-
-    <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário -->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

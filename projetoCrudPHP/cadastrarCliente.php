@@ -9,12 +9,12 @@
         $idade = $_POST['txtIdade'];
         $email = $_POST['txtEmail'];
         $endereco = $_POST['txtEndereco'];
-        $senha = $_POST['txtSenha'];
+       
       
     
         $con = mysqli_connect('localhost', 'root', 'Uscs94066819', 'projetoPHP');
         
-        $sql = "INSERT INTO usuario VALUES ('$cpf', '$nome', $idade, '$email', '$endereco', '$senha')";
+        $sql = "INSERT INTO usuario VALUES ('$cpf', '$nome', $idade, '$email', '$endereco')";
     
         if (mysqli_query($con, $sql)){
             $mensagem = "<div class='alert alert-success'>Registro gravado com sucesso!</div>";
@@ -53,9 +53,7 @@
             <input class="form-control" type="text" name="txtEmail" id="">
             <label for="">Endereco</label>
             <input class="form-control" type="text" name="txtEndereco" id="">
-            <label for="">Senha</label>
-            <input class="form-control" type="text"name="txtSenha" id= "">
-
+        
             <input class="btn btn-success" type="submit" value="Cadastrar" name="btnCadastrar">
         </form>
         <a class="btn btn-primary" href="listarCliente.php">Voltar</a>
