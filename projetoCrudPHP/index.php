@@ -63,7 +63,7 @@
   <body class="text-center">
     <form class="form-signin" action= "cadastrarCliente.php" method= "POST">
       <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
-      <label for="inputEmail" class="email">email</label>
+      <label for="inputEmail" class="email">Email</label>
       <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus></br>
       <label for="inputCpf" class="text">CPF  </label>
       <input type="Cpf " id="inputCpf" class="form-control" placeholder="Seu cpf" required autofocus>

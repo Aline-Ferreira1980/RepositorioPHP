@@ -41,7 +41,7 @@ if (isset($_POST['btnCadastrar'])){
 <h2> Cliente Cadastrado com Sucesso!!!</h2></br></br>
     <h4>Dados do Cliente:</h4></br>
 
-   <p table> 
+   <p> 
        CPF: <?php echo $_POST["txtCpf"]; ?></br>
        Nome: <?php echo $_POST["txtNome"]; ?></br>
        Idade: <?php echo $_POST["txtIdade"]; ?></br>
@@ -49,6 +49,14 @@ if (isset($_POST['btnCadastrar'])){
        Endereco: <?php echo $_POST["txtEndereco"]; ?></br>
           
     </p>
+    <div class="container">
+        <?php echo $mensagem; ?>
+        <form action="listarCliente.php" method="POST">
+
+            <input class="btn btn-success" type="submit" value="Proximo" name="btnProximo">
+        </form>
+        <a class="btn btn-primary" href="listarCliente.php">Voltar</a>
+    </div>
     
 </body>
 </html>

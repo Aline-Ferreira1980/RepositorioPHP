@@ -25,7 +25,7 @@
 </head>
 <body>
 <div class="container">
-        <a class="btn btn-primary" href="excluirCliente.php">Cadastro_realizado</a>
+        <a class="btn btn-primary" href="excluirCliente.php">excluirCliente</a>
         <table class="table table-responsive table-striped">
             <thead>
                 <tr>
@@ -34,7 +34,6 @@
                     <th>Idade</th>
                     <th>Email</th>
                     <th>Endereco</th>
-                    
                     <th>Remover</th>
                 </tr>
             </thead>
