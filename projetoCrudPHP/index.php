@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>Template de login, usando Bootstrap.</title>
@@ -69,8 +70,8 @@
       <input type="Cpf " id="inputCpf" class="form-control" placeholder="Seu cpf" required autofocus>
       <div class="checkbox mb-3">
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-      
+      <input class="btn btn-success" type="submit" value="login" name="btnLogin">      
     </form>
   </body>
 </html>
+
