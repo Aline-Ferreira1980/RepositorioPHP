@@ -1,3 +1,33 @@
+
+<?php
+
+$mensagem = "";
+
+if (isset($_POST['btnCadastrar'])){
+    $cpf = $_POST['txtCpf'];
+    $nome = $_POST['txtNome'];
+    $idade = $_POST['txtIdade'];
+    $email = $_POST['txtEmail'];
+    $endereco = $_POST['txtEndereco'];
+    $senha = $_POST['txtSenha'];
+  
+
+    $con = mysqli_connect('localhost', 'root', 'Uscs94066819', 'projetoPHP');
+    
+    $sql = "INSERT INTO usuario VALUES ('$cpf', '$nome', $idade, '$email', '$endereco')";
+
+    if (mysqli_query($con, $sql)){
+        $mensagem = "<div class='alert alert-success'>Registro gravado com sucesso!</div>";
+    }else{
+        $mensagem = "<div class='alert alert-danger'>Erro ao gravar o registro!</div>";
+    }
+    
+    mysqli_close($con);
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +42,12 @@
     <h4>Dados do Cliente:</h4></br>
 
    <p> 
-       CPF: <?php echo $_POST["cpf"]; ?></br>
-       Nome:<?php echo $_POST["nome"]; ?></br>
-       Idade:<?php echo $_POST["idade"]; ?></br>
-       Email:<?php echo $_POST["email"]; ?></br>
-       Endereco: <?php echo $_POST["endereco"]; ?></br>    
+       CPF: <?php echo $_POST["txtCpf"]; ?></br>
+       Nome: <?php echo $_POST["txtNome"]; ?></br>
+       Idade: <?php echo $_POST["txtIdade"]; ?></br>
+       Email: <?php echo $_POST["txtEmail"]; ?></br>
+       Endereco: <?php echo $_POST["txtEndereco"]; ?></br>
+       Senha: <?php echo $_POST["txtSenha"]; ?></br>    
     </p>
     
 </body>

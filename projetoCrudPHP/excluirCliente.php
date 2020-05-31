@@ -6,10 +6,11 @@ $nome = $_GET['nome'];
 $idade = $_GET['idade'];
 $email = $_GET['email'];
 $endereco = $_GET['endereco'];
+$senha = $_GET['senha'];
 
 $con = mysqli_connect('localhost', 'root', 'Uscs94066819', 'projetoPHP');
     
-$sql = "DELETE FROM usuario WHERE cpf= '$cpf' and nome='$nome' and idade='$idade' and email='$email' and endereco = '$endereco' ";
+$sql = "DELETE FROM usuario WHERE cpf= '$cpf' and nome='$nome' and idade='$idade' and email='$email' and endereco = '$endereco' and senha = '$senha";
 
 if (mysqli_query($con, $sql)){
     header('Location: listarCliente.php');

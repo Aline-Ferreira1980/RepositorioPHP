@@ -25,7 +25,7 @@
 </head>
 <body>
 <div class="container">
-        <a class="btn btn-primary" href="cadastrarCliente.php">Cadastro_realizado</a>
+        <a class="btn btn-primary" href="excluirCliente.php">Cadastro_realizado</a>
         <table class="table table-responsive table-striped">
             <thead>
                 <tr>
@@ -34,6 +34,7 @@
                     <th>Idade</th>
                     <th>Email</th>
                     <th>Endereco</th>
+                    <th>Senha</th>
                     <th>Remover</th>
                 </tr>
             </thead>
@@ -46,6 +47,7 @@
                         $email = $usuario['email'];
                         $idade = $usuario['idade'];
                         $endereco = $usuario['endereco'];
+                        $senha = $usuario ['senha'];
                        
                         echo "<tr>
                                 <td>$cpf</td>
@@ -53,7 +55,8 @@
                                 <td>$idade</td>
                                 <td>$email</td>                                
                                 <td>$endereco</td>
-                                <td><a class='btn btn-small btn-danger' href='excluir.php?cpf=$cpf&nome=$nome&idade=$idade&email=$email&endereco=$endereco'>Excluir</a></td>
+                                <td>$senha</td>
+                                <td><a class='btn btn-small btn-danger' href='excluirCliente.php?cpf=$cpf&nome=$nome&idade=$idade&email=$email&endereco=$endereco&senha=$senha'>Excluir</a></td>
                             </tr>";
                     }
 
