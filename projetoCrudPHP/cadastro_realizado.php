@@ -83,14 +83,15 @@ if (isset($_POST['btnCadastrar'])){
 <body>
 <h2> Cliente Cadastrado com Sucesso!!!</h2></br></br>
     <h4>Dados do Cliente:</h4></br>
-
+    
+    
    <p> 
        CPF: <?php echo $_POST["txtCpf"]; ?></br>
        Nome: <?php echo $_POST["txtNome"]; ?></br>
        Idade: <?php echo $_POST["txtIdade"]; ?></br>
        Email: <?php echo $_POST["txtEmail"]; ?></br>
        Endereco: <?php echo $_POST["txtEndereco"]; ?></br>
-          
+      
     </p>
     <div class="container">
         <?php echo $mensagem; ?>
@@ -101,6 +102,6 @@ if (isset($_POST['btnCadastrar'])){
         </form>
         
     </div>
-    
+    </table>
 </body>
 </html>

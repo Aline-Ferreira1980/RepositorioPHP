@@ -97,9 +97,12 @@
             <label for="">Endereco</label>
             <input class="form-control" type="text" name="txtEndereco" id="">
         
-            <input class="btn btn-success" type="submit" value="Cadastrar" name="btnCadastrar">
+            <input class="btn btn-success" type="submit" value="Cadastrar" name="btnCadastrar"></br></br>
+            <input class="btn btn-success" type="submit" value="Login" name="btnLogin"></br>
         </form>
-        <a class="btn btn-primary" href="index.php">Voltar</a>
+        
+        </br><a class="btn btn-primary" href="index.php">Voltar</a>
+
     </div>
 </body>
 </html>

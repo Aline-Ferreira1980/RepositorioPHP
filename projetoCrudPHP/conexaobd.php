@@ -19,7 +19,7 @@ else {
 
 $con = mysqli_connect("localhost", "root", "Uscs94066819", "projetoPHP");
 
-$sql = "CREATE TABLE usuario (cpf CHAR(14), nome CHAR (50), idade INT (3), email CHAR (30),endereco CHAR (30))";
+$sql = "CREATE TABLE usuario (cpf CHAR (14) PRIMARY KEY, nome CHAR (50), idade INTEGER, email CHAR (50),endereco CHAR (50))";
 
 if (mysqli_query($con, $sql)){
     echo "Tabela criada com sucesso!!!";

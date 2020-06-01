@@ -61,7 +61,12 @@
     <link href="signin.css" rel="stylesheet">
   <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=0m04hpr5xbAXW6supHi_1Jd-M6Qx9ZJssSXTZT8Tw47xs9Ie4RLBNTciDjCDcfQ8Z-cvyvWYx4iux9rJo4w5AmXX7d7Cfk-tf0z10wJBdAI" charset="UTF-8"></script></head>
 
+
   <body class="text-center">
+    <div>
+      Login
+    </div>
+
     <form class="form-signin" action= "cadastrarCliente.php" method= "POST">
       <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
       <label for="inputEmail" class="email">Email</label>
@@ -70,8 +75,10 @@
       <input type="Cpf " id="inputCpf" class="form-control" placeholder="Seu cpf" required autofocus>
       <div class="checkbox mb-3">
       </div>
-      <input class="btn btn-success" type="submit" value="login" name="btnLogin">      
+      <input class="btn btn-success" type="submit" value="login" name="btnLogin">   
+      <a href="cadastrarCliente.php">Cadastrar agora!</a>   
     </form>
+
   </body>
 </html>
 
