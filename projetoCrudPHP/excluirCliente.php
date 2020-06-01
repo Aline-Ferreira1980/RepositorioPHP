@@ -1,6 +1,5 @@
-
 <?php
-
+session_start();
 $cpf = $_GET['cpf'];
 $nome = $_GET['nome'];
 $idade = $_GET['idade'];
@@ -20,7 +19,15 @@ if (mysqli_query($con, $sql)){
 
 mysqli_close($con);
 ?>
+<style>
+        body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
 
+
+  </style>
 <!DOCTYPE html>
 <html lang="en">
 <head>

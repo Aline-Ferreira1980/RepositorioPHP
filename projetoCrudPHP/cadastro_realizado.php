@@ -1,6 +1,5 @@
-
 <?php
-
+session_start();
 $mensagem = "";
 
 if (isset($_POST['btnCadastrar'])){
@@ -9,8 +8,6 @@ if (isset($_POST['btnCadastrar'])){
     $idade = $_POST['txtIdade'];
     $email = $_POST['txtEmail'];
     $endereco = $_POST['txtEndereco'];
-    
-  
 
     $con = mysqli_connect('localhost', 'root', 'Uscs94066819', 'projetoPHP');
     
@@ -19,15 +16,12 @@ if (isset($_POST['btnCadastrar'])){
     if (mysqli_query($con, $sql)){
         $mensagem = "<div class='alert alert-success'>Registro gravado com sucesso!</div>";
     }else{
-        $mensagem = "<div class='alert alert-danger'>Erro ao gravar o registro!</div>";
+        $mensagem = "<div class='alert alert-danger'>Erro ao gravar o registro! Cadastro existente ou falta de dados.</div>";
     }
     
     mysqli_close($con);
 }
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,61 +41,35 @@ if (isset($_POST['btnCadastrar'])){
   padding: 15px;
   margin: 0 auto;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
-}
+
 .form-signin .checkbox {
   font-weight: normal;
 }
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
   </style>
     
 </head>
 <body>
-<h2> Cliente Cadastrado com Sucesso!!!</h2></br></br>
-    <h4>Dados do Cliente:</h4></br>
-    
-    
+
+    <h3>Dados do Cliente:</h3></br>
+
    <p> 
        CPF: <?php echo $_POST["txtCpf"]; ?></br>
        Nome: <?php echo $_POST["txtNome"]; ?></br>
        Idade: <?php echo $_POST["txtIdade"]; ?></br>
        Email: <?php echo $_POST["txtEmail"]; ?></br>
        Endereco: <?php echo $_POST["txtEndereco"]; ?></br>
-      
+          
     </p>
     <div class="container">
         <?php echo $mensagem; ?>
         <form action="listarCliente.php" method="POST">
 
-            <input class="btn btn-success" type="submit" value="Proximo" name="btnProximo">
+            
+            <input class="btn btn-success" type="submit" value="Proximo" name="btnProximo"></br></br>
             <a class="btn btn-primary" href="cadastrarCliente.php">Voltar</a>
         </form>
         
     </div>
-    </table>
+    
 </body>
 </html>

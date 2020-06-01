@@ -1,31 +1,21 @@
 
 <?php
 
-    $mensagem = "";
+session_start();
 
-    if (isset($_POST['btnCadastrar'])){
-        $cpf = $_POST['txtCpf'];
-        $nome = $_POST['txtNome'];
-        $idade = $_POST['txtIdade'];
-        $email = $_POST['txtEmail'];
-        $endereco = $_POST['txtEndereco'];
-       
-      
+if($_SESSION['Login'] === ""){
+  
+  if($_POST['btnLogin']="Login"){
+    $_SESSION['Login'] = $_POST['e_mail'].$_POST['CPF'];
     
-        $con = mysqli_connect('localhost', 'root', 'Uscs94066819', 'projetoPHP');
-        
-        $sql = "INSERT INTO usuario VALUES ('$cpf', '$nome', $idade, '$email', '$endereco')";
-    
-        if (mysqli_query($con, $sql)){
-            $mensagem = "<div class='alert alert-success'>Registro gravado com sucesso!</div>";
-        }else{
-            $mensagem = "<div class='alert alert-danger'>Erro ao gravar o registro!</div>";
-        }
-        
-        mysqli_close($con);
-    }
-
-
+  }
+}
+if($_SESSION['Login']==="aline@uscs.edu.com.br461.415.180-95"){
+  echo "<div class='alert alert-success'><h2 align=center>Bem-vindo!</h2></div>";
+}else{
+  $_SESSION['ErroDeLogin'] = "<b>Erro ao efetuar login!</b><br>Verifique seu e-mail e CPF novamente.";
+  header('Location: index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -49,41 +39,12 @@
   padding: 15px;
   margin: 0 auto;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
-}
-.form-signin .checkbox {
-  font-weight: normal;
-}
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
 
   </style>
 </head>
 <body>
 <div class="container">
-        <?php echo $mensagem; ?>
+        
         <form action="cadastro_realizado.php" method="POST">
         
             <label for="">CPF</label>
@@ -97,13 +58,9 @@
             <label for="">Endereco</label>
             <input class="form-control" type="text" name="txtEndereco" id="">
         
-            <input class="btn btn-success" type="submit" value="Cadastrar" name="btnCadastrar"></br></br>
-            <input class="btn btn-success" type="submit" value="Login" name="btnLogin"></br>
+            <input class="btn btn-success" type="submit" value="Cadastrar" name="btnCadastrar">
         </form>
-        
-        </br><a class="btn btn-primary" href="index.php">Voltar</a>
-
+        <a class="btn btn-primary" href="index.php">Voltar</a>
     </div>
 </body>
 </html>
-
