@@ -1,6 +1,6 @@
 <?php
 
-$con = mysqli_connect("localhost", "root", "Uscs94066819");
+$con = mysqli_connect("localhost", "root", " ");
 
 if (mysqli_connect_errno($con)){
     echo "Erro ao conectar com a base de dados: ".mysqli_connect_error();
@@ -17,7 +17,7 @@ else {
 
 }
 
-$con = mysqli_connect("localhost", "root", "Uscs94066819", "projetoPHP");
+$con = mysqli_connect("localhost", "root", " ", "projetoPHP");
 
 $sql = "CREATE TABLE usuario (cpf CHAR (14) PRIMARY KEY, nome CHAR (50), idade INTEGER, email CHAR (50),endereco CHAR (50))";
 
