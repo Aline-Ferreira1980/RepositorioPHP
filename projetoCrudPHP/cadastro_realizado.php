@@ -54,8 +54,9 @@ if (isset($_POST['btnCadastrar'])){
         <form action="listarCliente.php" method="POST">
 
             <input class="btn btn-success" type="submit" value="Proximo" name="btnProximo">
+            <a class="btn btn-primary" href="cadastrarCliente.php">Voltar</a>
         </form>
-        <a class="btn btn-primary" href="listarCliente.php">Voltar</a>
+        
     </div>
     
 </body>

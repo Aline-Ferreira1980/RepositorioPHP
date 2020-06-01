@@ -19,13 +19,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Lista de Cliente</title>
 </head>
 <body>
 <div class="container">
-        <a class="btn btn-primary" href="excluirCliente.php">excluirCliente</a>
+        <a class="btn btn-primary" href="excluirCliente.php">Exclusão</a>
         <table class="table table-responsive table-striped">
             <thead>
                 <tr>
@@ -54,8 +54,7 @@
                                 <td>$idade</td>
                                 <td>$email</td>                                
                                 <td>$endereco</td>
-                                
-                                <td><a class='btn btn-small btn-danger' href='excluirCliente.php?cpf=$cpf&nome=$nome&idade=$idade&email=$email&endereco=$endereco>Excluir</a></td>
+                                <td><a class='btn btn-small btn-danger' href='excluirCliente.php?cpf=$cpf&nome=$nome&idade=$idade&email=$email&endereco=$endereco'>Excluir</a></td>
                             </tr>";
                     }
 

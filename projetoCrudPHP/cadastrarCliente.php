@@ -56,7 +56,7 @@
         
             <input class="btn btn-success" type="submit" value="Cadastrar" name="btnCadastrar">
         </form>
-        <a class="btn btn-primary" href="listarCliente.php">Voltar</a>
+        <a class="btn btn-primary" href="index.php">Voltar</a>
     </div>
 </body>
 </html>

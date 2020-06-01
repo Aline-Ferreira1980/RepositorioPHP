@@ -30,7 +30,11 @@ mysqli_close($con);
     <title>Exclusão de Cliente</title>
 </head>
 <body>
-    
+<form action="listarCliente.php" method="POST">
+
+<input class="btn btn-success" type="submit" value="confirmar" name="btnConfirmar">
+<a class="btn btn-primary" href="listarCliente.php">Voltar</a>
+</form>
 </body>
 </html>
 
