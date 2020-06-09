@@ -9,7 +9,7 @@ if (isset($_POST['btnCadastrar'])){
     $email = $_POST['txtEmail'];
     $endereco = $_POST['txtEndereco'];
 
-    $con = mysqli_connect('localhost', 'root', 'Uscs94066819', 'projetoPHP');
+    $con = mysqli_connect('localhost', 'root', ' ', 'projetoPHP');
     
     $sql = "INSERT INTO usuario VALUES ('$cpf', '$nome', $idade, '$email', '$endereco')";
 

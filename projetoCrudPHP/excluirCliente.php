@@ -7,7 +7,7 @@ $email = $_GET['email'];
 $endereco = $_GET['endereco'];
 
 
-$con = mysqli_connect('localhost', 'root', 'Uscs94066819', 'projetoPHP');
+$con = mysqli_connect('localhost', 'root', ' ', 'projetoPHP');
     
 $sql = "DELETE FROM usuario WHERE cpf= '$cpf' and nome='$nome' and idade='$idade' and email='$email' and endereco = '$endereco'";
 
