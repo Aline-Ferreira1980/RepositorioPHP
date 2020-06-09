@@ -36,15 +36,7 @@ if (isset($_POST['btnCadastrar'])){
   background-color: #eee;
 }
 
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
 
-.form-signin .checkbox {
-  font-weight: normal;
-}
   </style>
     
 </head>
