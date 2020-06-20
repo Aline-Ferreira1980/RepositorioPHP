@@ -1,15 +1,17 @@
 <?php
-$file = fopen("arquivo1.txt","r+");
-$file2 = fopen ("arquivo2.txt","a+");
 
-$conteudo = "Ciencia da Computaçao";
+$conteudo = " ";
 
-fwrite ($file2,$conteudo);
-fwrite($file, " Aline ");
+$file = fopen("arquivo1.txt","r");
 
-if ($file != $file2)
-fwrite ($file2, $conteudo);
+while (!feof($file)){
+    $conteudo = fgets($file);
+  
+}
 
+fclose ($file);
 
-fclose($file);
+$file2= fopen("arquivo2.txt","w");
+fwrite($file2, $conteudo);
+fclose($file2);
 ?>
