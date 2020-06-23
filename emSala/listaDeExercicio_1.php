@@ -10,13 +10,13 @@
 
     $n= 10;
     if ($n >0){
-        printf "Valor positivo";
+        printf ("Valor positivo");
     }
     elseif ($n < 0){
-        printf "Valor negativo";
+        printf ("Valor negativo");
     }
     else {
-        printf "Igual a Zero";
+        printf ("Igual a Zero");
     }
     ?>
 </body>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <p><b></b>Cadastro de Produtos</b></p></p>
+    <title>Cadastro de Produto</title>
+</head>
+<body>
+    <form action="cadastroProduto.php" method="POST" name="produtos">
+       Nome:  <input type="text" name="nome" /><br><br>
+       Código: <input type="number" name="codigo" value="codigo"/><br><br>
+       Quantidade:  <input type="number" name="quantidade" value="quantidade"/><br><br>
+       Unidade:  <input type="text" name="unidade"/><br><br>
+       Preço: R$<input type="text" name="preco" /><br><br>
+       <input class="btn btn-block btn-primary" style="border-radius: 30px;" type="submit" value="Enviar" name="enviar">
+       <input class="btn btn-block btn-primary" style="border-radius: 30px;" type="reset" value="Limpar" name="limpar">
+
+    </form>
+    
+</body>
+</html>

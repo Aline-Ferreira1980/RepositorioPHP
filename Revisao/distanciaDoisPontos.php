@@ -13,9 +13,9 @@
         $x2 = 5.0;
         $y2 = 5.0;
 
-        $distancia= (sqrt($x2-$x1)+($y2-$y1));
+        $distancia= (sqrt($x2-$x1)^2+($y2-$y1)^2);
 
-        printf("Distancia entre dois pontos é: %s",number_format($distancia,2));
+        printf("Distancia entre os pontos A e B é: %s cm",number_format($distancia,2));
     ?>
 </body>
 </html>
